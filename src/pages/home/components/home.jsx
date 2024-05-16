@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Background from "../../../assets/imgHome/template.svg";
+import BackgroundFooter from "../../../assets/imgHome/rodape.svg";
 
 //Header
 export const Header = styled.header`
@@ -166,10 +167,8 @@ export const ContainerAbout = styled.div`
     max-width: 1606px; 
     margin: 0 auto; 
     gap: 20px;
-`;
-
-export const ImagemAbout = styled.img`
-
+    margin-top: 200px;
+    margin-bottom: 400px;
 `;
 
 export const ContentAbout = styled.div`
@@ -177,7 +176,8 @@ export const ContentAbout = styled.div`
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
-   margin-left: 30px;
+    margin-left: 30px;
+    
 `;
 
 
@@ -234,5 +234,25 @@ export const Button = styled.button`
 `;
 
 
+//Footer
 
+export const Footer = styled.footer`
+background: url("${BackgroundFooter}") no-repeat center center/cover;
+   height: 100vh;
+`;
 
+export const FooterContainer = styled.div`
+  
+`;
+
+export const FooterTitle = styled.h1`
+  
+`;
+
+export const FooterList = styled.label`
+  
+`;
+
+export const FooterItem = styled.div`
+  
+`;
