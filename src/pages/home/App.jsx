@@ -4,13 +4,20 @@ import { useState } from "react";
 import { Header, Container, Logo, Nav, NavLink } from './components/home'
 import { Title, Subtitle, Paragrafo, ContainerIcons, IconLink, IconContainer, AutoajudaIcon, TranstornoIcon, InformacoesIcon, Label } from './components/home'
 import { ContainerAbout, ContentAbout, TitleAbout, About, Button } from './components/home'
-import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem } from './components/home'
+import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem, FooterListApoio } from './components/home'
 
 import LogoOASIS from "../../assets/imgHome/logoo.svg"
 import AutoIcons from "../../assets/imgHome/autoajuda.svg"
 import TranstornoIcons from "../../assets/imgHome/transtornos.svg"
 import InformacoesIcons from "../../assets/imgHome/prevencao.svg"
 import Cerebro from "../../assets/imgHome/sobre.svg"
+import Ajuda from "../../assets/imgHome/canaisDeAjuda.svg"
+import Artigo from "../../assets/imgHome/artigo.svg"
+import Apoio from "../../assets/imgHome/grupoDeApoio.svg"
+import WhatsApp from "../../assets/imgHome/whatsApp.svg"
+
+
+
 
 
 export default function App() {
@@ -77,19 +84,21 @@ export default function App() {
 
 
         <Footer>
+          <FooterTitle>Nossos serviços</FooterTitle>
           <FooterContainer>
-            <FooterTitle>Nossos serviços</FooterTitle>
-
             <FooterList>
+              <img src={Ajuda} alt="" />
               <FooterItem>Canais de ajuda e profissionais</FooterItem>
             </FooterList>
 
             <FooterList>
+              <img src={Artigo} alt="" />
               <FooterItem>Artigos</FooterItem>
             </FooterList>
 
             <FooterList>
-              <FooterItem>Grupos de apoio</FooterItem>
+              <img src={Apoio} alt="" />
+              <FooterListApoio>Grupos de apoio <img src={WhatsApp}/></FooterListApoio>
             </FooterList>
 
           </FooterContainer>

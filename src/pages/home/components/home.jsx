@@ -67,6 +67,7 @@ export const Title = styled.h1`
     font-style: normal;
     font-size: 47px;
     color: #65BBAD;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 export const Subtitle = styled.span`
@@ -99,7 +100,7 @@ export const IconContainer = styled.div`
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 200px;
+    margin-bottom: 11 0px;
   
 `;
 
@@ -154,7 +155,7 @@ export const Label = styled.span`
     font-size: 23px;
     line-height: 30px;
     color: #65BBAD;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 `;
 
@@ -237,22 +238,84 @@ export const Button = styled.button`
 //Footer
 
 export const Footer = styled.footer`
-background: url("${BackgroundFooter}") no-repeat center center/cover;
-   height: 100vh;
-`;
-
-export const FooterContainer = styled.div`
-  
+    background: url("${BackgroundFooter}") no-repeat center center/cover;
+    height:  75vh;
+    box-shadow: 0px 0px 24px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 27px 27px 0px 0px;
 `;
 
 export const FooterTitle = styled.h1`
-  
+    display: flex;
+    margin-bottom: 70px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lemon';
+    font-style: normal;
+    font-size: 48px;
+    line-height: 63px;
+    text-align: center;
+    color: #0c0808;
+    padding: 15px 0 0 0;
+    text-shadow: 0 0 5px #1c8676, 0 0 10px #1c8676, 0 0 20px #1c8676, 0 0 40px #4CAF50;
 `;
 
+export const FooterContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap:50px;
+
+`;
+
+
+
 export const FooterList = styled.label`
-  
+    display: flex;
+    flex-direction: column;
+    height: 560px;
+    box-shadow: 0px 17px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 27px 27px 36px 36px;
+    background-color: #2E554F;
 `;
 
 export const FooterItem = styled.div`
-  
-`;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lemon';
+    font-style: normal;
+    width: 244px;
+    height: 59px;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    cursor: pointer;
+    `
+export const FooterListApoio = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lemon';
+    font-style: normal;
+    width: 234px;
+    margin: 25px auto;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+   
+
+    img {
+        margin-left: 20px;
+        height: 40px;
+    }
+`
+
+
+
+
+
