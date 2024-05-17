@@ -25,7 +25,7 @@ export const Paragrafo = styled.p`
     font-family: 'Ledger';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 27px;
     line-height: 49px;
     text-align: center;
     color: #000000;
@@ -35,7 +35,7 @@ export const ContainerIcons = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 80px;
 `;
 
 export const IconContainer = styled.div`
@@ -43,7 +43,7 @@ export const IconContainer = styled.div`
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 11 0px;
+    margin-bottom: 15 0px;
   
 `;
 

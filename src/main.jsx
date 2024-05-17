@@ -1,13 +1,15 @@
+
 import React from 'react'
 import { createRoot } from 'react-dom/client';
-import App from './pages/home/App.jsx'
-import About from './pages/pageAbout/About.jsx'
+import RoutesTelas from './routes.jsx'; 
 import GlobalStyle from './styles/global.jsx';
-
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <About />
-    <GlobalStyle />
-  </React.StrictMode>,
-)
+    <>
+    <RoutesTelas/>
+      <GlobalStyle />
+    </>
+  </React.StrictMode>
+
+);

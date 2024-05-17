@@ -1,10 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 
 import { Header, Container, Logo, Nav, NavLink } from './components/home'
 import { Title, Subtitle, Paragrafo, ContainerIcons, IconLink, IconContainer, AutoajudaIcon, TranstornoIcon, InformacoesIcon, Label } from './components/main/main'
-import { ContainerAbout, ContentAbout, TitleAbout, About, Button } from './components/main/about'
-import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem, FooterListApoio } from './components/footer'
+import { ContainerAbout,ImageCerebro, ContentAbout, TitleAbout, About, Button } from './components/main/about'
+import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem, FooterListApoio,Imagens } from './components/footer'
 
 
 import LogoOASIS from "../../assets/imgHome/logoo.svg"
@@ -20,8 +21,17 @@ import WhatsApp from "../../assets/imgHome/whatsApp.svg"
 
 
 
-
 export default function App() {
+
+  const navigate = useNavigate();
+
+  async function addActionLerMais() {
+    navigate("/lermais")
+  }
+  async function addActionAutoAjuda() {
+    navigate("/autoajuda")
+  }
+  
 
   return (
     <>
@@ -47,7 +57,7 @@ export default function App() {
         <ContainerIcons>
 
           <IconContainer>
-            <IconLink href="#autoajuda" onClick={(e) => e.preventDefault()}>
+            <IconLink  onClick={addActionAutoAjuda}>
               <AutoajudaIcon src={AutoIcons} />
             </IconLink>
             <Label>Autoajuda e desenvolvimento pessoal</Label>
@@ -73,11 +83,11 @@ export default function App() {
 
         <ContainerAbout>
 
-          <img src={Cerebro} />
+          <ImageCerebro src={Cerebro} />
           <ContentAbout>
             <TitleAbout>Sobre nós</TitleAbout>
             <About>OÁSIS Mental: é um espaço dedicado à saúde mental, oferecendo informações, recursos e apoio para promover o bem-estar emocional. Explore conteúdos sobre  desenvolvimento pessoal, transtornos mentais e estratégias de prevenção. Encontre orientações para cultivar uma mente saudável e equilibrada em sua jornada de autocuidado.</About>
-            <Button>Ler Mais</Button>
+            <Button onClick={addActionLerMais}>Ler Mais</Button>
           </ContentAbout>
 
         </ContainerAbout>
@@ -88,18 +98,18 @@ export default function App() {
           <FooterTitle>Nossos serviços</FooterTitle>
           <FooterContainer>
             <FooterList>
-              <img src={Ajuda} alt="" />
+              <Imagens src={Ajuda} alt="" />
               <FooterItem>Canais de ajuda e profissionais</FooterItem>
             </FooterList>
 
             <FooterList>
-              <img src={Artigo} alt="" />
+              <Imagens src={Artigo} alt="" />
               <FooterItem>Artigos</FooterItem>
             </FooterList>
 
             <FooterList>
-              <img src={Apoio} alt="" />
-              <FooterListApoio>Grupos de apoio <img src={WhatsApp}/></FooterListApoio>
+              <Imagens src={Apoio} alt="" />
+              <FooterListApoio>Grupos de apoio <img src={WhatsApp} /></FooterListApoio>
             </FooterList>
 
           </FooterContainer>

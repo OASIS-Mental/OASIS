@@ -2,23 +2,27 @@ import styled from "styled-components";
 
 
 export const ContainerAbout = styled.div`
-
     display: flex;
     align-items: center;
+    justify-content: center;
     max-width: 1606px; 
     margin: 0 auto; 
     gap: 20px;
-    margin-top: 200px;
+    margin-top: 220px;
     margin-bottom: 400px;
+`;
+
+export const ImageCerebro = styled.img`
+   height: 35vh;
+    
 `;
 
 export const ContentAbout = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     margin-left: 30px;
-    
 `;
 
 
@@ -26,7 +30,6 @@ export const ContentAbout = styled.div`
 export const TitleAbout = styled.h2`
     font-family: 'Lemon';
     font-style: normal;
- 
     font-size: 40px;
     line-height: 48px;
     color: #65BBAD;
@@ -37,9 +40,10 @@ export const TitleAbout = styled.h2`
 export const About = styled.p`
     font-family: 'Ledger';
     font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
+    font-weight: 350;
+    font-size: 25px;
     line-height: 46px;
+    width: 800px;
     color: #000000;
     margin-bottom: 10px;
 `;
