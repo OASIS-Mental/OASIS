@@ -88,6 +88,30 @@ export default function About() {
                             <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>Ana Clara</p></FooterDivPersona>
                         </FooterDiv>
                     </FooterCardContainer>
+
+                    <FooterCardContainer>
+                        <FooterDiv>
+                            <ImagemCitar src={Citar} alt="" />
+                            <FooterDivText>Encontrei apoio para minha ansiedade e depressão no site. As técnicas de relaxamento e mindfulness me ajudaram a enfrentar os desafios.</FooterDivText>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>Ana Clara</p></FooterDivPersona>
+                        </FooterDiv>
+                    </FooterCardContainer>
+
+                    <FooterCardContainer>
+                        <FooterDiv>
+                            <ImagemCitar src={Citar} alt="" />
+                            <FooterDivText>Encontrei apoio para minha ansiedade e depressão no site. As técnicas de relaxamento e mindfulness me ajudaram a enfrentar os desafios.</FooterDivText>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>Ana Clara</p></FooterDivPersona>
+                        </FooterDiv>
+                    </FooterCardContainer>
+                    
+                    <FooterCardContainer>
+                        <FooterDiv>
+                            <ImagemCitar src={Citar} alt="" />
+                            <FooterDivText>Encontrei apoio para minha ansiedade e depressão no site. As técnicas de relaxamento e mindfulness me ajudaram a enfrentar os desafios.</FooterDivText>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>Ana Clara</p></FooterDivPersona>
+                        </FooterDiv>
+                    </FooterCardContainer>
                   
                 </FooterCarrocel>
             </Footer>

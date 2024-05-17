@@ -7,7 +7,7 @@ export const Footer = styled.div`
 
 export const FooterTitleContainer = styled.div`
     margin-left: 127px;
-    width: 577px;
+    width: 500px;
     height: 13px;
     margin-bottom: 150px;
     background: linear-gradient(90deg, #156B5D 0%, rgba(41, 209, 183, 0.6) 100%);
@@ -41,8 +41,8 @@ export const FooterDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 437px;
-    height: 625px;
+    width: 400px;
+    height: 550px;
     background: linear-gradient(180deg, #156B5D -4.28%, #5BB1A4 95.72%);
     box-shadow: 0px 17px 24px rgba(0, 0, 0, 0.25);
     border-radius: 27px;
@@ -53,8 +53,8 @@ export const FooterDiv = styled.div`
 
 export const ImagemCitar = styled.img`
     display: flex;
-    height: 60px;
-    width: 60px;
+    height: 45px;
+    width: 45px;
     margin: 90px  0 0 -260px;
 `;
 
@@ -67,7 +67,7 @@ export const FooterDivText = styled.p`
     font-family: 'Ledger';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
     padding: 30px;
     line-height: 56px;
     text-align: center;
@@ -80,9 +80,7 @@ export const FooterDivPersona = styled.div`
     align-items: center;
     height: 60px;
     width: 300px;
-    margin: 40px  0 0 -105px;
     gap: 20px;
-
 `;
 
 export const ImagemUsers = styled.img`
