@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from "react";
 
 import { Header, Container, Logo, Nav, NavLink } from './components/home'
-import { Title, Subtitle, Paragrafo, ContainerIcons, IconLink, IconContainer, AutoajudaIcon, TranstornoIcon, InformacoesIcon, Label } from './components/home'
-import { ContainerAbout, ContentAbout, TitleAbout, About, Button } from './components/home'
-import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem, FooterListApoio } from './components/home'
+import { Title, Subtitle, Paragrafo, ContainerIcons, IconLink, IconContainer, AutoajudaIcon, TranstornoIcon, InformacoesIcon, Label } from './components/main/main'
+import { ContainerAbout, ContentAbout, TitleAbout, About, Button } from './components/main/about'
+import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem, FooterListApoio } from './components/footer'
 
 import LogoOASIS from "../../assets/imgHome/logoo.svg"
 import AutoIcons from "../../assets/imgHome/autoajuda.svg"
