@@ -6,6 +6,7 @@ import { Title, Subtitle, Paragrafo, ContainerIcons, IconLink, IconContainer, Au
 import { ContainerAbout, ContentAbout, TitleAbout, About, Button } from './components/main/about'
 import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem, FooterListApoio } from './components/footer'
 
+
 import LogoOASIS from "../../assets/imgHome/logoo.svg"
 import AutoIcons from "../../assets/imgHome/autoajuda.svg"
 import TranstornoIcons from "../../assets/imgHome/transtornos.svg"
