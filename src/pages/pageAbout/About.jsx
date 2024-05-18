@@ -63,6 +63,7 @@ export default function About() {
                 </FooterTitleContainer>
 
                 <FooterCarrocel ref={carrosselRef} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}>
+
                     <FooterCardContainer>
                         <FooterDiv>
                             <ImagemCitar src={Citar} alt="" />
@@ -75,7 +76,7 @@ export default function About() {
                         <FooterDiv>
                             <ImagemCitar src={Citar} alt="" />
                             <FooterDivText>Consegui melhorar meus relacionamentos graças às dicas do site. Aprendi a estabelecer limites e me comunicar melhor.</FooterDivText>
-                            <FooterDivPersona><ImagemUsers src={Users} alt="" />Ana Clara</FooterDivPersona>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" />Pedro Lucas</FooterDivPersona>
                         </FooterDiv>
                     </FooterCardContainer>
 
@@ -83,7 +84,7 @@ export default function About() {
                         <FooterDiv>
                             <ImagemCitar src={Citar} alt="" />
                             <FooterDivText>Depois de perder meu emprego, o site me ajudou a definir novas metas e encontrar um propósito. Estou animada com o futuro.</FooterDivText>
-                            <FooterDivPersona><ImagemUsers src={Users} alt="" />Ana Clara</FooterDivPersona>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" />Sofia Lara</FooterDivPersona>
                         </FooterDiv>
                     </FooterCardContainer>
 
@@ -91,7 +92,7 @@ export default function About() {
                         <FooterDiv>
                             <ImagemCitar src={Citar} alt="" />
                             <FooterDivText>Encontrei apoio para minha ansiedade e depressão no site. As técnicas de relaxamento e mindfulness me ajudaram a enfrentar os desafios.</FooterDivText>
-                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>Ana Clara</p></FooterDivPersona>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>João Mark</p></FooterDivPersona>
                         </FooterDiv>
                     </FooterCardContainer>
 
@@ -99,11 +100,13 @@ export default function About() {
                         <FooterDiv>
                             <ImagemCitar src={Citar} alt="" />
                             <FooterDivText>Encontrei apoio para minha ansiedade e depressão no site. As técnicas de relaxamento e mindfulness me ajudaram a enfrentar os desafios.</FooterDivText>
-                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>Ana Clara</p></FooterDivPersona>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>Carlos Augusto</p></FooterDivPersona>
                         </FooterDiv>
                     </FooterCardContainer>
                 </FooterCarrocel>
+
             </Footer>
+
         </>
     );
 }

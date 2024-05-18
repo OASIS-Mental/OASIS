@@ -19,10 +19,11 @@ export const FooterTitle = styled.h1`
     font-style: normal;
     width: 400px;
     font-weight: 400;
-    font-size: 33px;
+    font-size: 30px;
     line-height: 46px;
     padding-top: 50px;
     color: #156B5D;
+
 `;
 
 export const FooterCarrocel = styled.div`
@@ -41,8 +42,8 @@ export const FooterDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    height: 550px;
+    width: 350px;
+    height: 500px;
     background: linear-gradient(180deg, #156B5D -4.28%, #5BB1A4 95.72%);
     box-shadow: 0px 17px 24px rgba(0, 0, 0, 0.25);
     border-radius: 27px;
@@ -53,21 +54,21 @@ export const FooterDiv = styled.div`
 
 export const ImagemCitar = styled.img`
     display: flex;
-    height: 45px;
-    width: 45px;
-    margin: 90px  0 0 -260px;
+    height: 42px;
+    width: 42px;
+    margin: 50px  0 0 -260px;
 `;
 
 export const FooterDivText = styled.p`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
-    height: 336px;
+    width: 350px;
+    height: 326px;
     font-family: 'Ledger';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 22px;
     padding: 30px;
     line-height: 56px;
     text-align: center;

@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useState } from "react";
+
 
 import { Header, Container, Logo, Nav, NavLink } from './components/home'
 import { Title, Subtitle, Paragrafo, ContainerIcons, IconLink, IconContainer, AutoajudaIcon, TranstornoIcon, InformacoesIcon, Label } from './components/main/main'
 import { ContainerAbout,ImageCerebro, ContentAbout, TitleAbout, About, Button } from './components/main/about'
-import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem, FooterListApoio,Imagens } from './components/footer'
+import { Footer, FooterContainer, FooterTitle, FooterList, FooterItem,Imagens } from './components/footer'
 
 
 import LogoOASIS from "../../assets/imgHome/logoo.svg"
@@ -17,8 +17,6 @@ import Ajuda from "../../assets/imgHome/canaisDeAjuda.svg"
 import Artigo from "../../assets/imgHome/artigo.svg"
 import Apoio from "../../assets/imgHome/grupoDeApoio.svg"
 import WhatsApp from "../../assets/imgHome/whatsApp.svg"
-
-
 
 
 export default function App() {
@@ -35,7 +33,7 @@ export default function App() {
 
   return (
     <>
-      <Header>
+       <Header>
         <Container>
           <Logo src={LogoOASIS} alt="Lixeira" />
           <Nav>
@@ -56,8 +54,8 @@ export default function App() {
 
         <ContainerIcons>
 
-          <IconContainer>
-            <IconLink  onClick={addActionAutoAjuda}>
+          <IconContainer onClick={addActionAutoAjuda}>
+            <IconLink>
               <AutoajudaIcon src={AutoIcons} />
             </IconLink>
             <Label>Autoajuda e desenvolvimento pessoal</Label>
@@ -97,6 +95,7 @@ export default function App() {
         <Footer>
           <FooterTitle>Nossos serviços</FooterTitle>
           <FooterContainer>
+            
             <FooterList>
               <Imagens src={Ajuda} alt="" />
               <FooterItem>Canais de ajuda e profissionais</FooterItem>
@@ -109,7 +108,7 @@ export default function App() {
 
             <FooterList>
               <Imagens src={Apoio} alt="" />
-              <FooterListApoio>Grupos de apoio <img src={WhatsApp} /></FooterListApoio>
+              <FooterItem>Grupos de apoio <img src={WhatsApp} /></FooterItem>
             </FooterList>
 
           </FooterContainer>

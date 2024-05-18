@@ -27,30 +27,37 @@ export const FooterContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:50px;
+    gap:80px;
 
 `;
 
 
 
-export const FooterList = styled.label`
+export const FooterList = styled.div`
     display: flex;
     flex-direction: column;
-    height: 460px;
-    box-shadow: 0px 17px 20px rgba(0, 0, 0, 0.25);
+    height: 440px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 27px 27px 36px 36px;
     background-color: #2E554F;
     cursor: pointer;
     transition: transform 0.3s ease;
 
-&:hover {
-  transform: translateY(-10px);
-}
+
+    &:hover {
+        transform: translateY(-3px); 
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    &:hover:active {
+        transform: translateY(0);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 `;
 
 
 export const Imagens = styled.img`
-   height: 40vh;
+   height: 33vh;
 `;
 
 
@@ -60,7 +67,7 @@ export const FooterItem = styled.div`
     align-items: center;
     font-family: 'Lemon';
     font-style: normal;
-    width: 244px;
+    width: 100%;
     height: 59px;
     font-size: 20px;
     line-height: 26px;
@@ -69,32 +76,13 @@ export const FooterItem = styled.div`
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: auto;
     cursor: pointer;
-`
-
-export const FooterListApoio = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Lemon';
-    font-style: normal;
-    width: 234px;
-    margin-left: 90px;
-    margin-top: 15px;
-    gap: 10px;
-    font-size: 20px;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-   
 
     img {
-        
+        display: flex;
+        margin-left:5px;
         height: 30px;
     }
 `
-
 
 
 
