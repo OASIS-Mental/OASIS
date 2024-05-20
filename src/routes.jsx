@@ -4,6 +4,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/home/App'
 import About from './pages/pageAbout/About'
 import AutoAjuda from './pages/autoAjuda/AutoAjuda'
+import Informacoes from './pages/informacoesTrans/Informacoes'
 
 export default function RoutesTelas() {
     return (
@@ -14,6 +15,7 @@ export default function RoutesTelas() {
                 <Route path="/homepage" element={<Home />} />
                 <Route path="/autoajuda" element={<AutoAjuda />} />
                 <Route path="/lermais" element={<About />} />
+                <Route path="/info" element={<Informacoes />} />
             </Routes>
         </Router>
     );

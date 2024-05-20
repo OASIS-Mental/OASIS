@@ -29,6 +29,9 @@ export default function App() {
   async function addActionAutoAjuda() {
     navigate("/autoajuda")
   }
+  async function addActionInfo() {
+    navigate("/info")
+  }
   
 
   return (
@@ -69,7 +72,7 @@ export default function App() {
           </IconContainer>
 
           <IconContainer>
-            <IconLink href="#informacoes" onClick={(e) => e.preventDefault()}>
+            <IconLink onClick={addActionInfo}>
               <InformacoesIcon src={InformacoesIcons} />
             </IconLink>
             <Label>Informações e prevenção</Label>
