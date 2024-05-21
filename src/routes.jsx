@@ -5,6 +5,10 @@ import Home from './pages/home/App'
 import About from './pages/pageAbout/About'
 import AutoAjuda from './pages/autoAjuda/AutoAjuda'
 import Informacoes from './pages/informacoesTrans/Informacoes'
+import TranstornosSintomas from './pages/Transtonos-Sintomas/Transtonos'
+import CanaisDeAjuda from './pages/Canais-Ajuda/Canais'
+import ArtigosDados from './pages/Artigos/DadosArtigos'
+import GrupoApoio from './pages/Grupo-Apoio/Apoio'
 
 export default function RoutesTelas() {
     return (
@@ -16,6 +20,10 @@ export default function RoutesTelas() {
                 <Route path="/autoajuda" element={<AutoAjuda />} />
                 <Route path="/lermais" element={<About />} />
                 <Route path="/info" element={<Informacoes />} />
+                <Route path="/transtornosSintomas" element={<TranstornosSintomas />} />
+                <Route path="/canaisAjuda" element={<CanaisDeAjuda />} />
+                <Route path="/artigosDeDados" element={<ArtigosDados />} />
+                <Route path="/gruposApoio" element={<GrupoApoio />} />
             </Routes>
         </Router>
     );

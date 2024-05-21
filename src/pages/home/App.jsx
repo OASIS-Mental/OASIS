@@ -33,6 +33,22 @@ export default function App() {
     navigate("/info")
   }
   
+  async function addActionTranstornos() {
+    navigate("/transtornosSintomas")
+  }
+  
+  async function addActionAjuda() {
+    navigate("/canaisAjuda")
+  }
+  
+  async function addActionArtigos() {
+    navigate("/artigosDeDados")
+  }
+  
+  async function addActionApoio() {
+    navigate("/gruposApoio")
+  }
+  
 
   return (
     <>
@@ -64,15 +80,15 @@ export default function App() {
             <Label>Autoajuda e desenvolvimento pessoal</Label>
           </IconContainer>
 
-          <IconContainer>
-            <IconLink href="#transtorno" onClick={(e) => e.preventDefault()}>
+          <IconContainer onClick={addActionTranstornos}>
               <TranstornoIcon src={TranstornoIcons} />
+            <IconLink  >
             </IconLink>
             <Label>Transtornos e sintomas</Label>
           </IconContainer>
 
-          <IconContainer>
-            <IconLink onClick={addActionInfo}>
+          <IconContainer onClick={addActionInfo}>
+            <IconLink >
               <InformacoesIcon src={InformacoesIcons} />
             </IconLink>
             <Label>Informações e prevenção</Label>
@@ -99,17 +115,17 @@ export default function App() {
           <FooterTitle>Nossos serviços</FooterTitle>
           <FooterContainer>
             
-            <FooterList>
+            <FooterList onClick={addActionAjuda}>
               <Imagens src={Ajuda} alt="" />
               <FooterItem>Canais de ajuda e profissionais</FooterItem>
             </FooterList>
 
-            <FooterList>
+            <FooterList onClick={addActionArtigos}>
               <Imagens src={Artigo} alt="" />
               <FooterItem>Artigos</FooterItem>
             </FooterList>
 
-            <FooterList>
+            <FooterList onClick={addActionApoio}>
               <Imagens src={Apoio} alt="" />
               <FooterItem>Grupos de apoio <img src={WhatsApp} /></FooterItem>
             </FooterList>
