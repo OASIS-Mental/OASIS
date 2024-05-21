@@ -5,7 +5,7 @@
 npm i
 ```
 
-## Rodar
+## Rodar a Page
 ```bash
 npm run dev
 ```
