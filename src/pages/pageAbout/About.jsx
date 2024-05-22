@@ -47,7 +47,7 @@ export default function About() {
         setDragging(true);
         setDragStartX(event.clientX);
         setScrollLeft(carrosselRef.current.scrollLeft);
-        setAutoScroll(false); // Stop auto scrolling when dragging starts
+        setAutoScroll(false); 
     };
 
     const handleMouseMove = (event) => {
