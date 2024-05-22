@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header, ImagemLogo, NavHeader, NavLink } from './components/header-about';
 import { Main, ImagemPeople, DivContiner, DivTitler, DivText } from './components/main-about';
@@ -11,7 +11,7 @@ import Citar from "../../assets/imgAbout/citar.svg";
 
 export default function About() {
     const navigate = useNavigate();
-  
+
     function goBackPage() {
         navigate('/');
     }
@@ -21,10 +21,33 @@ export default function About() {
     const [scrollLeft, setScrollLeft] = useState(0);
     const carrosselRef = useRef(null);
 
+    const [autoScroll, setAutoScroll] = useState(true);
+
+    useEffect(() => {
+        const carrossel = carrosselRef.current;
+        let animationFrameId;
+
+        const scrollCarrossel = () => {
+            if (autoScroll) {
+                if (carrossel.scrollLeft >= carrossel.scrollWidth / 2) {
+                    carrossel.scrollLeft = 0;
+                } else {
+                    carrossel.scrollLeft += 1;
+                }
+            }
+            animationFrameId = requestAnimationFrame(scrollCarrossel);
+        };
+
+        animationFrameId = requestAnimationFrame(scrollCarrossel);
+
+        return () => cancelAnimationFrame(animationFrameId);
+    }, [autoScroll]);
+
     const handleMouseDown = (event) => {
         setDragging(true);
         setDragStartX(event.clientX);
         setScrollLeft(carrosselRef.current.scrollLeft);
+        setAutoScroll(false); // Stop auto scrolling when dragging starts
     };
 
     const handleMouseMove = (event) => {
@@ -35,8 +58,17 @@ export default function About() {
 
     const handleMouseUp = () => {
         setDragging(false);
+        setTimeout(() => setAutoScroll(true), 2000); 
     };
-  
+
+    const handleMouseEnter = () => {
+        setAutoScroll(false); 
+    };
+
+    const handleMouseLeave = () => {
+        setTimeout(() => setAutoScroll(true), 2000); 
+    };
+
     return (
         <>
             <Header>
@@ -62,8 +94,56 @@ export default function About() {
                     <FooterTitle>DEPOIMENTOS DOS NOSSOS INTEGRANTES</FooterTitle>
                 </FooterTitleContainer>
 
-                <FooterCarrocel ref={carrosselRef} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}>
+                <FooterCarrocel
+                    ref={carrosselRef}
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    {/* Original items */}
+                    <FooterCardContainer>
+                        <FooterDiv>
+                            <ImagemCitar src={Citar} alt="" />
+                            <FooterDivText>O site me ajudou a lidar com o estresse da faculdade. As dicas de relaxamento me deram mais confiança.</FooterDivText>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" />Ana Clara</FooterDivPersona>
+                        </FooterDiv>
+                    </FooterCardContainer>
 
+                    <FooterCardContainer>
+                        <FooterDiv>
+                            <ImagemCitar src={Citar} alt="" />
+                            <FooterDivText>Consegui melhorar meus relacionamentos graças às dicas do site. Aprendi a estabelecer limites e me comunicar melhor.</FooterDivText>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" />Pedro Lucas</FooterDivPersona>
+                        </FooterDiv>
+                    </FooterCardContainer>
+
+                    <FooterCardContainer>
+                        <FooterDiv>
+                            <ImagemCitar src={Citar} alt="" />
+                            <FooterDivText>Depois de perder meu emprego, o site me ajudou a definir novas metas e encontrar um propósito. Estou animada com o futuro.</FooterDivText>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" />Sofia Lara</FooterDivPersona>
+                        </FooterDiv>
+                    </FooterCardContainer>
+
+                    <FooterCardContainer>
+                        <FooterDiv>
+                            <ImagemCitar src={Citar} alt="" />
+                            <FooterDivText>Encontrei apoio para minha ansiedade e depressão no site. As técnicas de relaxamento e mindfulness me ajudaram a enfrentar os desafios.</FooterDivText>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>João Mark</p></FooterDivPersona>
+                        </FooterDiv>
+                    </FooterCardContainer>
+
+                    <FooterCardContainer>
+                        <FooterDiv>
+                            <ImagemCitar src={Citar} alt="" />
+                            <FooterDivText>Encontrei apoio para minha ansiedade e depressão no site. As técnicas de relaxamento e mindfulness me ajudaram a enfrentar os desafios.</FooterDivText>
+                            <FooterDivPersona><ImagemUsers src={Users} alt="" /><p>Carlos Augusto</p></FooterDivPersona>
+                        </FooterDiv>
+                    </FooterCardContainer>
+
+                    {/* Cloned items for infinite loop */}
                     <FooterCardContainer>
                         <FooterDiv>
                             <ImagemCitar src={Citar} alt="" />
@@ -106,7 +186,6 @@ export default function About() {
                 </FooterCarrocel>
 
             </Footer>
-
         </>
     );
 }

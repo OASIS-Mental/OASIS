@@ -30,6 +30,7 @@ export const FooterCarrocel = styled.div`
     display: flex;
     padding: 100px;
     overflow-x: hidden;
+
    
 `;
 
