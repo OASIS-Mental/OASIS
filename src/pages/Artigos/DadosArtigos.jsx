@@ -17,6 +17,14 @@ export default function DadosArtigos() {
     function goBackPage() {
         navigate('/');
     }
+    async function addActionLogin() {
+        navigate("/logar" )
+      }
+      
+      async function addActionCadastrar() {
+        navigate("/cadastro")
+      }
+      
 
     return (
         <>
@@ -24,8 +32,8 @@ export default function DadosArtigos() {
                 <ImagemLogo src={LogoOASIS} alt="Logo OASIS" />
                 <NavHeader>
                     <NavLink onClick={goBackPage}>Home</NavLink>
-                    <NavLink href="#login">Login</NavLink>
-                    <NavLink href="#register">Cadastrar</NavLink>
+                    <NavLink onClick={addActionLogin}>Login</NavLink>
+                    <NavLink onClick={addActionCadastrar}>Cadastrar</NavLink>
                 </NavHeader>
             </Header>
 

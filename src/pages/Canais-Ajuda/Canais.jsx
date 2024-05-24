@@ -23,14 +23,22 @@ export default function Transtonos() {
         navigate('/');
     }
 
+    async function addActionLogin() {
+        navigate("/logar")
+    }
+
+    async function addActionCadastrar() {
+        navigate("/cadastro")
+    }
+
     return (
         <>
             <Header>
                 <ImagemLogo src={LogoOASIS} alt="Logo" />
                 <NavHeader>
                     <NavLink onClick={goBackPage}>Home</NavLink>
-                    <NavLink href="#login">Login</NavLink>
-                    <NavLink href="#register">Cadastrar</NavLink>
+                    <NavLink onClick={addActionLogin}>Login</NavLink>
+                    <NavLink onClick={addActionCadastrar}>Cadastrar</NavLink>
                 </NavHeader>
             </Header>
 
