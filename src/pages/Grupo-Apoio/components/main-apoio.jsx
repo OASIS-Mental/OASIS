@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 export const Main = styled.div`
     display: flex;
@@ -75,12 +75,24 @@ export const ItemApoio = styled.li`
     line-height: 56px;
     text-align: justify;
     color: #000000;
-    cursor: pointer;
+    list-style-type: none;
+`;
+
+
+
+const bounce = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 `;
 
 export const Imagem = styled.img`
-    height: 4vh;
-    cursor: pointer;
+  height: 4vh;
+  cursor: pointer;
+  animation: ${bounce} 2s infinite ease-in-out;
 `;
 
 export const MapaApoio = styled.img`

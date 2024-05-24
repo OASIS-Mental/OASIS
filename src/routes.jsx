@@ -9,6 +9,8 @@ import TranstornosSintomas from './pages/Transtonos-Sintomas/Transtonos'
 import CanaisDeAjuda from './pages/Canais-Ajuda/Canais'
 import ArtigosDados from './pages/Artigos/DadosArtigos'
 import GrupoApoio from './pages/Grupo-Apoio/Apoio'
+import Cadastrar from './pages/Cadastrar/CadastrarUsers.jsx'
+import Login from './pages/Login/Login.jsx'
 
 export default function RoutesTelas() {
     return (
@@ -24,6 +26,8 @@ export default function RoutesTelas() {
                 <Route path="/canaisAjuda" element={<CanaisDeAjuda />} />
                 <Route path="/artigosDeDados" element={<ArtigosDados />} />
                 <Route path="/gruposApoio" element={<GrupoApoio />} />
+                <Route path="/cadastro" element={<Cadastrar />} />
+                <Route path="/logar" element={<Login />} />
             </Routes>
         </Router>
     );

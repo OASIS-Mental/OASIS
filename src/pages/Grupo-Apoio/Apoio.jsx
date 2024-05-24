@@ -67,11 +67,11 @@ export default function Apoio() {
                         <ItemApoio>
                             <Imagem src={Whatsapp} /> Entrar no Grupo do WhatsApp: Conecte-se com outros membros do grupo para compartilhar experiências e oferecer apoio mútuo em tempo real.
                         </ItemApoio>
-                        <ItemApoio onClick={toggleCalendar}>
-                            <Imagem src={Calendario} /> Reuniões Online: Escolha um dia conveniente, horário sempre às 20h, inscreva-se e participe.
+                        <ItemApoio >
+                            <Imagem src={Calendario} onClick={toggleCalendar} /> Reuniões Online: Escolha um dia conveniente, horário sempre às 20h, inscreva-se e participe.
                         </ItemApoio>
-                        <ItemApoio onClick={toggleMeetingCalendar}>
-                            <Imagem src={Pin} /> Participação Presencial: Temos no momento em Belo Horizonte, MG, Parque Municipal. Explore no calendário as datas dos encontros de acordo com o mês, são os marcados. Os horários são todos às 15h.
+                        <ItemApoio >
+                            <Imagem src={Pin}onClick={toggleMeetingCalendar} /> Participação Presencial: Temos no momento em Belo Horizonte, MG, Parque Municipal. Explore no calendário as datas dos encontros de acordo com o mês, são os marcados. Os horários são todos às 15h.
                         </ItemApoio>
                     </ListaApoio>
                     <MapaApoio src={Group} />

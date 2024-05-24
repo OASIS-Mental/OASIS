@@ -49,6 +49,14 @@ export default function App() {
     navigate("/gruposApoio")
   }
   
+  async function addActionLogin() {
+    navigate("/logar" )
+  }
+  
+  async function addActionCadastrar() {
+    navigate("/cadastro")
+  }
+  
 
   return (
     <>
@@ -56,8 +64,8 @@ export default function App() {
         <Container>
           <Logo src={LogoOASIS} alt="Lixeira" />
           <Nav>
-            <NavLink href="#login">Login</NavLink>
-            <NavLink href="#register">Cadastrar</NavLink>
+            <NavLink onClick={addActionLogin}>Login</NavLink>
+            <NavLink onClick={addActionCadastrar}>Cadastrar</NavLink>
           </Nav>
         </Container>
       </Header>
