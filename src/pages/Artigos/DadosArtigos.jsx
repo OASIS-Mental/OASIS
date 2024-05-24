@@ -44,7 +44,7 @@ export default function DadosArtigos() {
                         <DivArtigos>
                             <Container>
                                 <ListaDeArtigos>
-                                O bem-estar psicológico, baseado em teorias do desenvolvimento humano, saúde mental e psicologia humanista-existencial, engloba autoaceitação, relacionamentos positivos, autonomia e propósito na vida. Este artigo revisa sua definição, origens e métodos de avaliação, destacando sua associação com a saúde. Há uma necessidade identificada de mais estudos sobre o bem-estar psicológico no Brasil. Saiba mais em:<a href="https://www.scielo.br/j/estpsi/a/J448bhT3RqFYwBDMgMqDPqg/#"> SciELO - Brasil - Bem-estar psicológico: definição, avaliação e principais correlatos Bem-estar psicológico: definição, avaliação e principais correlatos  </a></ListaDeArtigos>
+                                O bem-estar psicológico, baseado em teorias do desenvolvimento humano, saúde mental e psicologia humanista-existencial, engloba autoaceitação, relacionamentos positivos, autonomia e propósito na vida. Este artigo revisa sua definição, origens e métodos de avaliação, destacando sua associação com a saúde. Há uma necessidade identificada de mais estudos sobre o bem-estar psicológico no Brasil. Saiba mais em:<a href="https://www.scielo.br/j/estpsi/a/J448bhT3RqFYwBDMgMqDPqg/#" target="_blank"> SciELO - Brasil - Bem-estar psicológico: definição, avaliação e principais correlatos Bem-estar psicológico: definição, avaliação e principais correlatos  </a></ListaDeArtigos>
                             </Container>
                             <Imagens src={Imagem1} alt="Imagem de Bem-estar psicológico" />
                         </DivArtigos>
@@ -57,7 +57,7 @@ export default function DadosArtigos() {
                             <Imagens src={Imagem2} alt="Imagem de Regulação emocional" />
                             <Container>
                                 <ListaDeArtigos>
-                                Regulação emocional: entenda como esse conceito funciona e qual é o papel da psicoterapia no site<a href="https://blog.cognitivo.com/regulacao-emocional/"> Regulação emocional: entenda como esse conceito funciona e qual é o papel da psicoterapia</a>
+                                Regulação emocional: entenda como esse conceito funciona e qual é o papel da psicoterapia no site<a href="https://blog.cognitivo.com/regulacao-emocional/" target="_blank"> Regulação emocional: entenda como esse conceito funciona e qual é o papel da psicoterapia</a>
                                 </ListaDeArtigos>
                             </Container>
                         </DivArtigos>
@@ -70,7 +70,7 @@ export default function DadosArtigos() {
                             <Container>
                                 <ListaDeArtigos>
                                 Como Lidar com Traumas: Técnicas Eficazes de Enfrentamento<br/>
-                                <br/>O enfrentamento de traumas é uma jornada desafiadora, mas essencial para a saúde mental e emocional. Afinal, como lidar com experiências traumáticas de forma eficaz? Quais são as técnicas mais recomendadas para superar os efeitos devastadores? Visite:<a href="https://psicanaliseblog.com.br/lidar-traumas-tecnicas-eficazes-enfrentamento/">Lidar-traumas-tecnicas-eficazes-enfrentamento</a> <br/>
+                                <br/>O enfrentamento de traumas é uma jornada desafiadora, mas essencial para a saúde mental e emocional. Afinal, como lidar com experiências traumáticas de forma eficaz? Quais são as técnicas mais recomendadas para superar os efeitos devastadores? Visite:<a href="https://psicanaliseblog.com.br/lidar-traumas-tecnicas-eficazes-enfrentamento/" target="_blank">Lidar-traumas-tecnicas-eficazes-enfrentamento</a> <br/>
                                 <br/>Assista também, Luto: como lidar com a dor da perda // Viver Bem  <a href="https://www.bing.com/videos/riverview/relatedvideo?q=como%20lidar%20com%20a%20dor%20da%20perda&mid=244A16DC283195701AC1244A16DC283195701AC1&ajaxhist=0">Bing Vídeos</a>
                                 
                                 </ListaDeArtigos>

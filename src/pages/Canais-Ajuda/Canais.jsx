@@ -64,7 +64,7 @@ export default function Transtonos() {
                                     <h2>Psitto</h2>
                                 </TitleG1>
                                 <ListaCanais> Psitto é uma plataforma cuidadosamente elaborada para fornecer terapia online, reconhecendo que a vida cotidiana muitas vezes nos impede de priorizar nosso bem-estar emocional. Desde a abertura do primeiro consultório físico em 2010, a Psitto tem se dedicado a aprimorar suas estratégias de atendimento, priorizando a qualidade oferecida aos pacientes.
-                                    Nela você agenda consultas online e gratuitas no site:<a href="https://www.psitto.com.br/psicologo/"target="_blank"> Psicólogo Online | Conheça agora os profissionais da Psitto</a></ListaCanais>
+                                    Nela você agenda consultas online e gratuitas no site:<a href="https://www.psitto.com.br/psicologo/" target="_blank"> Psicólogo Online | Conheça agora os profissionais da Psitto</a></ListaCanais>
                             </ContainerG1>
                         </DivG1>
                     </Canais>
@@ -78,7 +78,7 @@ export default function Transtonos() {
                         </TitleG1>
                         <DivG1>
                             <ContainerG1>
-                                <ListaCanais>O CW realiza apoio emocional e prevenção do suicídio, atendendo voluntária e gratuitamente todas as pessoas que querem e precisam conversar.<a href="https://cvv.org.br/"target="_blank"> Você pode entrar em contato por telefone, e-mail, chat e voip 24 horas por dia, todos os dias3</a></ListaCanais>
+                                <ListaCanais>O CW realiza apoio emocional e prevenção do suicídio, atendendo voluntária e gratuitamente todas as pessoas que querem e precisam conversar.<a href="https://cvv.org.br/" target="_blank"> Você pode entrar em contato por telefone, e-mail, chat e voip 24 horas por dia, todos os dias3</a></ListaCanais>
                             </ContainerG1>
                             <ImagemEstresse src={Cell} />
                         </DivG1>
@@ -96,15 +96,15 @@ export default function Transtonos() {
                                 </TitleG1>
                                 <ListaCanais>PsyMeet: A PsyMeet Social oferece um meio simples e direto de contatar psicólogos profissionais.
                                     Procure um especialista de acordo com área de atuação e entre em contato imediatamente para agendar seu atendimento!
-                                    Nosso serviço foi pensado para ser acessível a quem mais precisa: você! Veja em <a href="https://www.psymeetsocial.com/"target="_blank"> Terapia Online Social - PsyMeet</a></ListaCanais>
+                                    Nosso serviço foi pensado para ser acessível a quem mais precisa: você! Veja em <a href="https://www.psymeetsocial.com/" target="_blank"> Terapia Online Social - PsyMeet</a></ListaCanais>
                             </ContainerG1>
                         </DivG1>
                     </Canais>
                 </ContainerCanais>
-
-                <FooterTem />
-
             </Main>
+            <FooterTem />
+
+
         </>
     )
 }
