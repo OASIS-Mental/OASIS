@@ -18,6 +18,7 @@ export const Header = styled.div`
 export const ImagemLogo = styled.img`
     margin-left: 30px;
     height: 50px;
+    cursor: pointer;
 `;
 
 export const NavHeader = styled.div`

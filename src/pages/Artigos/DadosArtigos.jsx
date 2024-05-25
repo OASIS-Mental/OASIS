@@ -29,7 +29,7 @@ export default function DadosArtigos() {
     return (
         <>
             <Header>
-                <ImagemLogo src={LogoOASIS} alt="Logo OASIS" />
+                <ImagemLogo onClick={goBackPage} src={LogoOASIS} alt="Logo OASIS" />
                 <NavHeader>
                     <NavLink onClick={goBackPage}>Home</NavLink>
                     <NavLink onClick={addActionLogin}>Login</NavLink>

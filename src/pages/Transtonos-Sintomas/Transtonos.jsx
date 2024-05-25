@@ -34,7 +34,7 @@ export default function Transtonos() {
     return (
         <>
             <Header>
-                <ImagemLogo src={LogoOASIS} alt="Logo" />
+                <ImagemLogo onClick={goBackPage} src={LogoOASIS} alt="Logo" />
                 <NavHeader>
                     <NavLink onClick={goBackPage}>Home</NavLink>
                     <NavLink onClick={addActionLogin}>Login</NavLink>
