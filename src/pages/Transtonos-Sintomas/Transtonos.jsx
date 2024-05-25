@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { Header, ImagemLogo, NavHeader, NavLink } from './components/header-transtornos';
 import { Introducao, Title } from './components/main-transtornos';
-import { Main, Estresse, DivEstresse, TitleEstresse, Container, ContainerEstresse,  ListaEstresse, ImagemEstresse } from './components/main-transtornos';
+import { Main, Estresse, DivEstresse, TitleEstresse, Container, ContainerEstresse, ListaEstresse, ImagemEstresse } from './components/main-transtornos';
 import { FooterTem } from './components/footer-transtorno';
 
 import LogoOASIS from "../../assets/imgAbout/logo.svg";
@@ -23,13 +23,13 @@ export default function Transtonos() {
         navigate('/');
     }
     async function addActionLogin() {
-        navigate("/logar" )
-      }
-      
-      async function addActionCadastrar() {
+        navigate("/logar")
+    }
+
+    async function addActionCadastrar() {
         navigate("/cadastro")
-      }
-      
+    }
+
 
     return (
         <>
@@ -51,9 +51,9 @@ export default function Transtonos() {
                 <Container>
 
                     <Estresse>
-                        <TitleEstresse>Estresse no Dia a Dia</TitleEstresse>
                         <DivEstresse>
                             <ContainerEstresse>
+                                <TitleEstresse>Estresse no Dia a Dia</TitleEstresse>
                                 <ListaEstresse>Dificuldade em concentrar-se nas tarefas.</ListaEstresse>
                                 <ListaEstresse>Tensão muscular persistente, como dores nas costas ou no pescoço.</ListaEstresse>
                                 <ListaEstresse>Mudanças no apetite, como comer em excesso ou falta de apetite.</ListaEstresse>
@@ -65,7 +65,6 @@ export default function Transtonos() {
                     </Estresse>
 
                     <Estresse>
-
                         <DivEstresse>
                             <ImagemEstresse src={Imagem2} />
                             <ContainerEstresse>
@@ -80,9 +79,10 @@ export default function Transtonos() {
                     </Estresse>
 
                     <Estresse>
-                        <TitleEstresse>Depressão</TitleEstresse>
+
                         <DivEstresse>
                             <ContainerEstresse>
+                                <TitleEstresse>Depressão</TitleEstresse>
                                 <ListaEstresse>Sentimentos de desesperança ou vazio persistente.</ListaEstresse>
                                 <ListaEstresse>Perda de interesse em atividades que antes eram prazerosas.</ListaEstresse>
                                 <ListaEstresse>Alterações no peso ou apetite, como ganho ou perda significativa de peso sem motivo aparente.</ListaEstresse>
@@ -94,10 +94,11 @@ export default function Transtonos() {
                     </Estresse>
 
                     <Estresse>
-                        <TitleEstresse>Solidão e Isolamento Social</TitleEstresse>
+
                         <DivEstresse>
                             <ImagemEstresse src={Imagem4} />
                             <ContainerEstresse>
+                                <TitleEstresse>Solidão e Isolamento Social</TitleEstresse>
                                 <ListaEstresse>Sensação de desconexão ou distanciamento dos outros, mesmo quando cercado por pessoas..</ListaEstresse>
                                 <ListaEstresse>Falta de interesse em fazer planos sociais ou participar de atividades em grupo.</ListaEstresse>
                                 <ListaEstresse>Sentimento de vazio emocional, mesmo em situações sociais.</ListaEstresse>
@@ -108,9 +109,9 @@ export default function Transtonos() {
                     </Estresse>
 
                     <Estresse>
-                        <TitleEstresse>Transtorno Obsessivo-Compulsivo (TOC)</TitleEstresse>
                         <DivEstresse>
                             <ContainerEstresse>
+                                <TitleEstresse>Transtorno Obsessivo-Compulsivo (TOC)</TitleEstresse>
                                 <ListaEstresse>Pensamentos obsessivos persistentes e indesejados, como preocupações com germes, segurança ou ordem.</ListaEstresse>
                                 <ListaEstresse>Comportamentos compulsivos repetitivos, como lavar as mãos, verificar constantemente as fechaduras das portas ou organizar itens de forma específica.</ListaEstresse>
                                 <ListaEstresse>Sentimentos de ansiedade intensa ou desconforto quando os rituais compulsivos não são realizados.</ListaEstresse>
@@ -121,10 +122,11 @@ export default function Transtonos() {
                     </Estresse>
 
                     <Estresse>
-                        <TitleEstresse>Transtorno de Estresse Pós-Traumático (TEPT)</TitleEstresse>
+
                         <DivEstresse>
                             <ImagemEstresse src={Imagem6} />
                             <ContainerEstresse>
+                                <TitleEstresse>Transtorno de Estresse Pós-Traumático (TEPT)</TitleEstresse>
                                 <ListaEstresse>Flashbacks perturbadores ou intrusivos de um evento traumático passado.</ListaEstresse>
                                 <ListaEstresse>Pesadelos frequentes relacionados ao trauma.</ListaEstresse>
                                 <ListaEstresse>Evitação de lugares, pessoas ou atividades que lembrem o evento traumático.</ListaEstresse>
@@ -136,9 +138,9 @@ export default function Transtonos() {
                     </Estresse>
 
                     <Estresse>
-                        <TitleEstresse>Transtorno Bipolar</TitleEstresse>
                         <DivEstresse>
                             <ContainerEstresse>
+                                <TitleEstresse>Transtorno Bipolar</TitleEstresse>
                                 <ListaEstresse>Mudanças extremas de humor, incluindo períodos de mania, euforia ou hipomania seguidos por episódios de depressão.</ListaEstresse>
                                 <ListaEstresse>Aumento da atividade ou energia durante os episódios de mania, como falar rápido demais, agitação ou comportamento impulsivo.</ListaEstresse>
                                 <ListaEstresse>Baixa energia, fadiga e falta de motivação durante os episódios depressivos.</ListaEstresse>
@@ -150,10 +152,11 @@ export default function Transtonos() {
                     </Estresse>
 
                     <Estresse>
-                        <TitleEstresse>Transtorno de Personalidade Borderline (TPB)</TitleEstresse>
+
                         <DivEstresse>
                             <ImagemEstresse src={Imagem8} />
                             <ContainerEstresse>
+                                <TitleEstresse>Transtorno de Personalidade Borderline (TPB)</TitleEstresse>
                                 <ListaEstresse>Instabilidade emocional intensa, incluindo mudanças rápidas de humor e sentimentos de vazio.</ListaEstresse>
                                 <ListaEstresse>Relacionamentos instáveis ​​e intensos, caracterizados por idealização e desvalorização de outras pessoas.</ListaEstresse>
                                 <ListaEstresse>Comportamentos impulsivos, como gastos excessivos, abuso de substâncias, comportamento sexual de risco ou autolesão.</ListaEstresse>

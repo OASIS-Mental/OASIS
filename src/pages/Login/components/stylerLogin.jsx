@@ -47,7 +47,7 @@ export const Input = styled.input`
     }
 `;
 
-export const ButtonCadastrar = styled.button`
+export const ButtonLogar = styled.button`
   position: relative;
     padding-left: 15px;
     width: 25vw;
@@ -80,30 +80,6 @@ export const ButtonCadastrar = styled.button`
         width: 100%;
     }
 `;
-
-
-
-
-export const ButtonVoltar = styled.button`
-    margin-top: 20px;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    font-family: 'Lemon';
-    font-style: normal;
-    font-size: 17px;
-    line-height: 39px;
-    color: #000000;
-    cursor: pointer;
-`;
-
-export const Imagem = styled.img`
-    height: 3vh;
-    margin-right: 20px;
-`;
-
 
 export const PasswordContainer = styled.div`
     position: relative;
@@ -143,5 +119,23 @@ export const ImageMHome = styled.img`
     cursor: pointer;
     animation: ${bounce} 2s infinite ease-in-out;
 `;
+export const ContainerLabel = styled.div`
+    width: 22vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+`;
+
+export const LabelButton = styled.label`
+    cursor: pointer;
+    font-family: 'Lemon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 37px;
+    color: #000000;
+
+`;
+
 
 
