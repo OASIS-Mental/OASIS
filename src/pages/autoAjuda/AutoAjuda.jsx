@@ -11,17 +11,17 @@ import ImagemD from "../../assets/imgAutoajuda/imgDireita.svg";
 export default function AutoAjuda() {
     const navigate = useNavigate();
 
-    function goBackPage() {
+    async function goBackPage() {
         navigate('/');
     }
     async function addActionLogin() {
-        navigate("/logar" )
-      }
-      
-      async function addActionCadastrar() {
+        navigate("/logar")
+    }
+
+    async function addActionCadastrar() {
         navigate("/cadastro")
-      }
-      
+    }
+
     return (
         <>
             <Header>
@@ -78,7 +78,7 @@ export default function AutoAjuda() {
 
                     <ImagemDireita src={ImagemD} />
                 </Container>
-                
+
                 <FooterTemplate />
 
             </Main>
