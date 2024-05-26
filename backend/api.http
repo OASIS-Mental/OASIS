@@ -1,0 +1,49 @@
+###
+### Obtendo todos os usuários cadastrados
+###
+
+GET http://localhost:3000/users
+
+###
+### Cadastrando um novo usuário
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "name": "Novo Usuário",
+  "email": "novo@usuario.com",
+  "password": "senha123"
+}
+
+###
+### Realizando login
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "novo@usuario.com",
+  "password": "senha123"
+}
+
+###
+### Redefinindo a senha de um usuário
+###
+
+POST http://localhost:3000/reset-password
+Content-Type: application/json
+
+{
+  "email": "novo@usuario.com",
+  "newPassword": "novaSenha123"
+}
+
+###
+### Deletando um usuário específico
+###
+
+DELETE http://localhost:3000/users/14
+
