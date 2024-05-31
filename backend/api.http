@@ -26,7 +26,7 @@ Content-Type: application/json
 
 {
   "email": "novo@usuario.com",
-  "password": "senha123"
+  "password": "novaSenha123"
 }
 
 ###
@@ -45,5 +45,4 @@ Content-Type: application/json
 ### Deletando um usuário específico
 ###
 
-DELETE http://localhost:3000/users/21
-
+DELETE http://localhost:3000/users/43
