@@ -90,7 +90,7 @@ export default function Apoio() {
     }
 
     function handleEditUser() {
-        console.log('Editar Usuário');
+        navigate('/reset-users');
     }
 
     function redirectUser(path) {
@@ -173,7 +173,7 @@ export default function Apoio() {
                             <Imagem src={Whatsapp} onClick={handleLinkClick} /> Entrar no Grupo do WhatsApp: Conecte-se com outros membros do grupo para compartilhar experiências e oferecer apoio mútuo em tempo real.
                         </ItemApoio>
                         <ItemApoio >
-                            <Imagem src={Calendario} onClick={combinedClickHandler} /> Reuniões Online: Escolha um dia conveniente, horário sempre às 20h, inscreva-se e participe.
+                            <Imagem src={Calendario} onClick={combinedClickHandler} /> Reuniões Online: Escolha um dia conveniente, horário sempre às 19h, inscreva-se e participe.
                         </ItemApoio>
                         <ItemApoio >
                             <Imagem src={Pin} onClick={combinedClickHandler} /> Participação Presencial

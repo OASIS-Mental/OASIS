@@ -12,6 +12,8 @@ model User {
   name                     String
   email                    String    @unique
   password                 String
+  objectives               String?
+  fears                    String?
   resetPasswordToken       String?   // Campo para armazenar o token de redefinição de senha
   resetPasswordTokenExpiry DateTime? // Campo para armazenar a data de expiração do token
 }

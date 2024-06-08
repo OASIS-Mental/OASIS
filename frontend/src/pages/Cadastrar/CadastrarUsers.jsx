@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { Header, Main, Container, Label, InputWrapper, Input, TogglePasswordIconn, ButtonCadastrar, ButtonVoltar, ImageMHome, ErrorMessage } from './components/stylerCadastro'; // Adicionei InputWrapper e ErrorMessage
+import { Header, Main, Container, Label, InputWrapper, Input, ButtonCadastrar, ButtonVoltar, ImageMHome, ErrorMessage } from './components/stylerCadastro'; // Adicionei InputWrapper e ErrorMessage
 import SetaVoltar from "../../assets/imgCadastro/botao-de-seta-para-a-esquerda-do-teclado.svg";
 import HomeFrame from "../../assets/imgCadastro/frame.svg";
 
-import Eye from "../../assets/imgCadastro/eye.svg";
-import EyeOff from "../../assets/imgCadastro/eye-off.svg";
 
 export default function CadastrarUsers() {
     const [name, setName] = useState('');
@@ -15,7 +13,8 @@ export default function CadastrarUsers() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errors, setErrors] = useState({});
     const [showPassword, setShowPassword] = useState(false);
-    const [isPasswordEntered, setIsPasswordEntered] = useState(false);
+
+    
     const navigate = useNavigate();
 
     const toggleShowPassword = () => {
@@ -104,30 +103,14 @@ export default function CadastrarUsers() {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-
-                        {isPasswordEntered && (
-                            <TogglePasswordIconn onClick={toggleShowPassword}>
-                                <img src={showPassword ? EyeOff : Eye} alt="Toggle Password Visibility" />
-                            </TogglePasswordIconn>
-                        )}
-
                         {errors.password && <ErrorMessage>Senha inválida: deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e caracteres especiais (@$!%*?&)</ErrorMessage>}
-                    </InputWrapper>
+                                      </InputWrapper>
                 </Container>
-
 
                 <Container>
                     <Label>Confirmar Senha</Label>
                     <InputWrapper>
                         <Input placeholder="Confirmar Senha" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-
-                        {isPasswordEntered && (
-                            <TogglePasswordIconn onClick={toggleShowPassword}>
-                                <img src={showPassword ? EyeOff : Eye} alt="Toggle Password Visibility" />
-                            </TogglePasswordIconn>
-                        )}
-
-
                         {errors.confirmPassword && <ErrorMessage>As senhas não correspondem</ErrorMessage>}
                     </InputWrapper>
                 </Container>
@@ -136,7 +119,7 @@ export default function CadastrarUsers() {
                 <ButtonVoltar onClick={goBackLogar}><img src={SetaVoltar} alt="Seta para voltar" />Voltar a tela de login</ButtonVoltar>
                 <ImageMHome onClick={goBackHome} src={HomeFrame} />
             </Main>
-            <img src={Eye} alt="" />
+
         </>
     );
 }

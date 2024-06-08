@@ -83,7 +83,7 @@ export default function Transtonos() {
 
 
     function handleEditUser() {
-        console.log('Editar Usuário');
+        navigate('/reset-users');
     }
 
     function redirectUser(path) {

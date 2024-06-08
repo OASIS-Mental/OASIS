@@ -1,8 +1,8 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const cors = require('cors');
-const bcrypt = require('bcryptjs'); // Para hash de senha
-const jwt = require('jsonwebtoken'); // Para geração de tokens
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const server = express();
 const port = 3000;
@@ -10,12 +10,12 @@ server.use(express.json());
 server.use(cors());
 
 const prisma = new PrismaClient();
-const jwtSecret = 'your_secret_key'; // Troque por uma chave segura
+const jwtSecret = 'your_secret_key';
 
 // Rota para mostrar todos os usuários
 server.get('/users', async (req, res) => {
   try {
-    const users = await prisma.user.findMany(); // Modificado para user.findMany()
+    const users = await prisma.user.findMany();
     res.json(users);
   } catch (error) {
     console.error("Error fetching users:", error);
@@ -64,19 +64,19 @@ server.post('/login', async (req, res) => {
     }
 
     const token = generateToken(user);
-    res.json({ token, user }); // Retornando o objeto user junto com o token
+    res.json({ token, user });
   } catch (error) {
     console.error('Error logging in:', error);
     res.status(500).json({ error: 'Erro ao fazer login. Por favor, tente novamente ou mais tarde.' });
   }
 });
 
-
 // Middleware para verificar token JWT
 const authenticateToken = (req, res, next) => {
-  const token = req.headers['authorization'];
+  const authorizationHeader = req.headers['authorization'];
+  if (!authorizationHeader) return res.status(401).json({ error: 'Access denied' });
 
-  if (!token) return res.status(401).json({ error: 'Access denied' });
+  const token = authorizationHeader.split(' ')[1];
 
   jwt.verify(token, jwtSecret, (err, user) => {
     if (err) return res.status(403).json({ error: 'Invalid token' });
@@ -84,6 +84,7 @@ const authenticateToken = (req, res, next) => {
     next();
   });
 };
+
 
 // Rota para redefinir a senha
 server.post('/reset-password', async (req, res) => {
@@ -111,6 +112,67 @@ server.delete('/users/:id', async (req, res) => {
     res.json({ message: 'User deleted successfully' });
   } catch (error) {
     console.error("Error deleting user:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// Rota para buscar informações de objetivos e medos do usuário
+server.get('/users/:id/details', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const user = await prisma.user.findUnique({
+      where: { id: parseInt(id) },
+      select: {
+        objectives: true,
+        fears: true
+      }
+    });
+    if (user) {
+      res.json(user);
+    } else {
+      res.status(404).json({ error: 'User not found' });
+    }
+  } catch (error) {
+    console.error("Error fetching user details:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// Rota para atualizar informações de objetivos e medos do usuário
+server.put('/users/:id/details', async (req, res) => {
+  const { id } = req.params;
+  const { objectives, fears } = req.body;
+
+  try {
+    const updatedUser = await prisma.user.update({
+      where: { id: parseInt(id) },
+      data: {
+        objectives,
+        fears
+      }
+    });
+    res.json(updatedUser);
+  } catch (error) {
+    console.error("Error updating user details:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// Rota para obter um usuário específico
+server.get('/users/:id', authenticateToken, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const user = await prisma.user.findUnique({
+      where: { id: parseInt(id) }
+    });
+    if (user) {
+      res.json(user);
+    } else {
+      res.status(404).json({ error: 'User not found' });
+    }
+  } catch (error) {
+    console.error("Error fetching user:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });

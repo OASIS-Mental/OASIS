@@ -75,7 +75,7 @@ export default function AutoAjuda() {
        
 
     function handleEditUser() {
-        console.log('Editar Usuário');
+        navigate('/reset-users');
     }
 
     function redirectUser(path) {

@@ -151,20 +151,12 @@ export const ImageMHome = styled.img`
     cursor: pointer;
     animation: ${bounce} 2s infinite ease-in-out;
 `;
+
 export const ErrorMessage = styled.span`
     color:red;
     margin-top: 18px;
     margin-left: 8px;
 
-`;
-
-export const TogglePasswordIconn = styled.div`
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    z-index: 2;
 `;
 
 

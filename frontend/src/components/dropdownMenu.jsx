@@ -31,7 +31,7 @@ const DropdownMenu = ({ userName, onEdit, onLogout }) => {
   return (
     <Menu>
       <UserGreeting>Olá, {userName}</UserGreeting>
-      <MenuItem onClick={onEdit}>Editar Usuário</MenuItem>
+      <MenuItem onClick={onEdit}>Usuário</MenuItem>
       <MenuItem onClick={onLogout}>Sair</MenuItem>
     </Menu>
   );

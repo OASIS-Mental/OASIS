@@ -76,7 +76,7 @@ export default function Informacoes() {
 
 
     function handleEditUser() {
-        console.log('Editar Usuário');
+        navigate('/reset-users');
     }
 
     function redirectUser(path) {

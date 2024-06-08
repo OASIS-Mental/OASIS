@@ -12,6 +12,7 @@ import GrupoApoio from './pages/Grupo-Apoio/Apoio'
 import Cadastrar from './pages/Cadastrar/CadastrarUsers.jsx'
 import Login from './pages/Login/Login.jsx'
 import RedefinirS from './pages/RedefinirSenha/Redefinir.jsx'
+import Edit from './pages/EditarUsers/Editar.jsx'
 
 
 export default function RoutesTelas() {
@@ -31,6 +32,7 @@ export default function RoutesTelas() {
                 <Route path="/cadastro" element={<Cadastrar />} />
                 <Route path="/logar" element={<Login />} />
                 <Route path="/reset-password" element={<RedefinirS />} />
+                <Route path="/reset-users" element={<Edit />} />
              
             </Routes>
         </Router>
