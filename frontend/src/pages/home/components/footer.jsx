@@ -13,15 +13,16 @@ export const Footer = styled.footer`
 
     @media screen and (max-width: 1300px) {
         height: 48vh;
+
     }
 
     @media screen and (max-width: 1200px) {
-        height: 42vh;
+        height: 100%;
     }
 
     @media screen and (max-width: 768px) {
-        height: 36vh;
-    }
+        height: 100%;
+      }
 
     @media screen and (max-width: 480px) {
         height: 30vh;
@@ -55,11 +56,12 @@ export const FooterTitle = styled.h1`
     }
 
     @media screen and (max-width: 768px) {
-        font-size: 5vh;
+        font-size: 4vh;
+        height: 3px;
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 5vh;
+        font-size: 3.6vh;
     }
 `;
 
@@ -67,12 +69,11 @@ export const FooterContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-
- 
+    gap: 100px;
 
     @media screen and (max-width: 1700px) {
         height: 30vh;
+        gap: 130px;
     }
 
     @media screen and (max-width: 1300px) {
@@ -80,7 +81,8 @@ export const FooterContainer = styled.div`
     }
 
     @media screen and (max-width: 1200px) {
-        height: 40vh;
+        height: 47vh;
+        gap: 50px;
     }
 
     @media screen and (max-width: 768px) {
@@ -89,9 +91,7 @@ export const FooterContainer = styled.div`
         flex-direction: column;
     }
 
-    @media screen and (max-width: 480px) {
-        height: 35vh;
-    }
+
 `;
 
 export const FooterList = styled.div`
@@ -125,23 +125,24 @@ export const FooterList = styled.div`
 
     @media screen and (max-width: 1200px) {
         height: 40vh;
+        width: 24vw;
     }
 
     @media screen and (max-width: 768px) {
         height: auto;
+        width: 40vw;
         margin-bottom: 20px;
     }
 
-    @media screen and (max-width: 480px) {
-        height: 35vh;
-    }
+
 `;
 
 export const Imagens = styled.img`
     height: 33vh;
 
     @media screen and (max-width: 1700px) {
-        height: 27vh;
+        height: auto;
+        width: 14vw;
     }
 
     @media screen and (max-width: 1300px) {
@@ -149,17 +150,16 @@ export const Imagens = styled.img`
     }
 
     @media screen and (max-width: 1200px) {
-        height: 30vh;
+        height: auto;
+        width: 24vw;
     }
 
     @media screen and (max-width: 768px) {
         height: auto;
+        width: 40vw;
         margin-bottom: 20px;
     }
 
-    @media screen and (max-width: 480px) {
-        height: 25vh;
-    }
 `;
 
 export const FooterItem = styled.div`
@@ -178,12 +178,34 @@ export const FooterItem = styled.div`
     margin: auto;
     cursor: pointer;
 
-
     img {
         display: flex;
         margin-left: 5px;
         height: 30px;
     }
 
-    
+
+
+    @media screen and (max-width: 1700px) {
+        height: 38vh;
+        width: 14vw;
+    }
+
+    @media screen and (max-width: 1300px) {
+        height: 45vh;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: 2vh;
+        height: auto;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 2vh;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+
 `;

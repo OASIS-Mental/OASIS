@@ -156,6 +156,7 @@ export default function App() {
 
         <Footer>
           <FooterTitle>Nossos serviços</FooterTitle>
+          
           <FooterContainer>
             <FooterList onClick={() => redirectUser("/canaisAjuda")}>
               <Imagens src={Ajuda} alt="" />

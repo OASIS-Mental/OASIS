@@ -26,6 +26,25 @@ export const TitleDesenvolvimento = styled.h2`
     text-align: center;
     color: #65BBAD;
     margin-bottom: 100px;
+
+    @media screen and (max-width: 1700px) {
+        font-size: 2.5vw;
+    }
+
+    @media screen and (max-width: 1300px) {
+        font-size: 5.5vw;
+        line-height: 7.5vw;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: 6vw;
+        line-height: 8vw;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 8vw;
+        line-height: 10vw;
+    }
 `;
 
 
@@ -38,6 +57,11 @@ export const ParagrafoDesenvolvimento = styled.p`
     line-height: 46px;
     text-align: justify;
     color: #000000;
+
+    @media screen and (max-width: 1700px) {
+        width: 1150px;
+        font-size: 1.4vw;
+    }
 `;
 
 
@@ -46,6 +70,11 @@ export const Container = styled.div`
     justify-content: flex-end;
     align-items: flex-start;
     margin-bottom: 200px;
+
+    @media screen and (max-width: 1700px) {
+        width: 1300px;
+        font-size: 1.4vw;
+    }
 
 `;
 
@@ -77,6 +106,8 @@ export const TitlePessoal = styled.h3`
     border-image: linear-gradient(90deg, #156B5D 0%, rgba(41, 209, 183, 0.6) 100%);
     border-image-slice: 1; 
     margin-bottom: 30px;
+
+ 
 `;
 
 
@@ -89,6 +120,10 @@ export const ParagrafoPessoal = styled.p`
     color: #000000;
     max-width: 100%;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 1700px) {
+        font-size: 1.2vw;
+    }
 `;
 
 
@@ -109,6 +144,10 @@ export const TitleTropicos = styled.li`
     color: #000000;
     margin-left: 30px;
 
+    @media screen and (max-width: 1700px) {
+        font-size: 1.2vw;
+    }
+
 `;
 
 export const ParagrafoFinal = styled.p`
@@ -119,4 +158,9 @@ export const ParagrafoFinal = styled.p`
     text-align: justify;
     color: #000000;
     margin-top: 20px;
-`;
+
+    @media screen and (max-width: 1700px) {
+        font-size: 1.3vw;
+    }
+  
+`

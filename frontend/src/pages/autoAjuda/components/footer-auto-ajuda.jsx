@@ -5,7 +5,13 @@ import BackgroundFooter from "../../../assets/imgHome/rodape.svg";
 export const ImagemDireita = styled.img`
     margin-top: 50px;
     width: 100%;
+
+    @media screen and (max-width: 1700px) {
+        height: 133vh;
+      
+    }
 `;
+
 export const FooterTemplate = styled.footer`
     background: url("${BackgroundFooter}") no-repeat center center/cover;
     height:  34vh;
