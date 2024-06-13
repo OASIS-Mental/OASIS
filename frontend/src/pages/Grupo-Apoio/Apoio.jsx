@@ -159,14 +159,17 @@ export default function Apoio() {
 
                 </NavHeader>
             </Header>
+
             <Main className={showCalendar || showMeetingCalendar ? "blurred" : ""}>
                 <IntroducaoApoio>
                     <TitleApoio>Grupo de Apoio</TitleApoio>
                 </IntroducaoApoio>
+                
                 <DescriptionApoio>
                     <TitleSub>Selecione sua forma de participação:</TitleSub>
                     <Paragrafo>Clique no ícone para participar de todas as opções disponíveis.</Paragrafo>
                 </DescriptionApoio>
+
                 <InfoApoio authenticated={isAuthenticated}>
                     <ListaApoio>
                         <ItemApoio>

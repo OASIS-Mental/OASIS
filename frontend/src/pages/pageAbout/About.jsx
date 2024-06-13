@@ -189,7 +189,7 @@ export default function About() {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
-                    {/* Original items */}
+ 
                     <FooterCardContainer>
                         <FooterDiv>
                             <ImagemCitar src={Citar} alt="" />

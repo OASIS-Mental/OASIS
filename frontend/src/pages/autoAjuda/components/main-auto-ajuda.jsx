@@ -32,18 +32,18 @@ export const TitleDesenvolvimento = styled.h2`
     }
 
     @media screen and (max-width: 1300px) {
-        font-size: 5.5vw;
-        line-height: 7.5vw;
+        font-size: 2.5vw;
+        width: 800px;
     }
 
-    @media screen and (max-width: 1200px) {
-        font-size: 6vw;
-        line-height: 8vw;
+    @media screen and (max-width: 1299px) {
+        font-size: 2.5vw;
+        width: 800px;
     }
 
     @media screen and (max-width: 768px) {
-        font-size: 8vw;
-        line-height: 10vw;
+        font-size: 2.5vw;
+        width: 420px;
     }
 `;
 
@@ -60,7 +60,22 @@ export const ParagrafoDesenvolvimento = styled.p`
 
     @media screen and (max-width: 1700px) {
         width: 1150px;
+        font-size: 1.2vw;
+    }
+
+    @media screen and (max-width: 1300px) {
         font-size: 1.4vw;
+        width: 870px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: 1.4vw;
+        width: 820px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 2vw;
+        width: 400px;
     }
 `;
 
@@ -73,8 +88,23 @@ export const Container = styled.div`
 
     @media screen and (max-width: 1700px) {
         width: 1300px;
-        font-size: 1.4vw;
+        font-size: 1.2vw;
     }
+
+    @media screen and (max-width: 1300px) {
+        font-size: 1.4vw;
+        width: 1000px;
+    }
+
+    @media screen and (max-width: 1299px) {
+        font-size: 2.5vw;
+        width: 800px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 300px;
+        margin-left: 300px;
+     }
 
 `;
 
@@ -84,6 +114,26 @@ export const ContainerFinal = styled.div`
     flex-direction: column;
     max-width: 1000px;
     margin-right: 50px;
+
+    @media screen and (max-width: 1700px) {
+        font-size: 1.2vw;
+  
+    }
+    @media screen and (max-width: 1300px) {
+        font-size: 1.4vw;
+        width: 1000px;
+    }
+
+    @media screen and (max-width: 1299px) {
+        font-size: 2.5vw;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 60px;
+        font-size: 2.5vw;
+        width: 300px;
+    }
 
 `;
 
@@ -107,7 +157,20 @@ export const TitlePessoal = styled.h3`
     border-image-slice: 1; 
     margin-bottom: 30px;
 
- 
+    @media screen and (max-width: 1300px) {
+        font-size: 1.5vw;
+        width: 1000px;
+    }
+
+    @media screen and (max-width: 1299px) {
+        font-size: 1.5vw;
+        width: 480px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.9vw;
+        width: 320px;
+    }
 `;
 
 
@@ -123,6 +186,21 @@ export const ParagrafoPessoal = styled.p`
 
     @media screen and (max-width: 1700px) {
         font-size: 1.2vw;
+    }
+
+    @media screen and (max-width: 1300px) {
+        font-size: 1.5vw;
+        width: 1000px;
+    }
+
+    @media screen and (max-width: 1299px) {
+        font-size: 1.5vw;
+        width: 480px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.7vw;
+        width: 320px;
     }
 `;
 
@@ -148,6 +226,21 @@ export const TitleTropicos = styled.li`
         font-size: 1.2vw;
     }
 
+    @media screen and (max-width: 1300px) {
+        font-size: 1.5vw;
+        width: 1000px;
+    }
+
+    @media screen and (max-width: 1299px) {
+        font-size: 1.5vw;
+        width: 480px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.7vw;
+        width: 320px;
+    }
+
 `;
 
 export const ParagrafoFinal = styled.p`
@@ -161,6 +254,11 @@ export const ParagrafoFinal = styled.p`
 
     @media screen and (max-width: 1700px) {
         font-size: 1.3vw;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.7vw;
+        width: 400px;
     }
   
 `

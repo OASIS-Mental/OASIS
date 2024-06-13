@@ -22,6 +22,24 @@ export const TitleApoio = styled.h1`
     line-height: 84px;
     text-align: center;
     color: #65BBAD;
+
+    @media screen and (max-width: 1700px) {
+       font-size: 3vw;
+       margin-top: 20px;
+      }
+
+      @media screen and (max-width: 1300px) {
+        font-size: 4vw;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: 4vw;
+    }
+
+    
+    @media screen and (max-width: 768px) {
+        font-size: 6vw;
+    }
 `;
 
 export const DescriptionApoio = styled.div`
@@ -40,6 +58,18 @@ export const TitleSub = styled.h3`
     line-height: 56px;
     text-align: justify;
     color: #5BB1A4;
+
+    @media screen and (max-width: 1700px) {
+       font-size: 2vw;
+      }
+    @media screen and (max-width: 1300px) {
+       font-size: 2.3vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
+
 `;
 
 export const Paragrafo = styled.p`
@@ -50,7 +80,26 @@ export const Paragrafo = styled.p`
     line-height: 56px;
     text-align: justify;
     color: #000000;
+
+    @media screen and (max-width: 1700px) {
+       font-size: 1.2vw;
+    }
+
+    @media screen and (max-width: 1300px) {
+       font-size: 1.5vw;
+      }
+      
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 17px;
+    }
+    
+
 `;
+
 export const Span = styled.span`
     margin-left: 20px;
     font-family: 'Ledger';
@@ -59,6 +108,20 @@ export const Span = styled.span`
     line-height: 56px;
     text-align: justify;
     color: #000000;
+
+    @media screen and (max-width: 1700px) {
+       font-size: 1.4vw;
+       line-height: 45px;
+      }
+
+      @media screen and (max-width: 1300px) {
+       font-size: 1.5vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+
 `;
 
 export const InfoApoio = styled.div`
@@ -72,18 +135,62 @@ export const InfoApoio = styled.div`
     box-shadow: 17px 17px 24px 17px rgba(0, 0, 0, 0.25);
     border-radius: 38px;
     margin: auto;
+    
     ${props => !props.authenticated && `
         padding-top: 40px;
         padding-bottom: 40px;
         height: auto;
-        
+
     `}
+
+    @media screen and (max-width: 1700px) {
+        width: 1200px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        width: 1100px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        max-width: 650px;
+        margin: auto;
+        height: 700px;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 90vw;
+        height: 600px;
+    }
+
+    
+    @media screen and (max-width: 540px) {
+        height: 670px;
+    }
+
+
 `;
 
 
 export const ListaApoio = styled.ul`
     margin: auto;
     width: 1100px; 
+
+    @media screen and (max-width: 1300px) {
+        width: 1000px; 
+      }
+    
+      @media screen and (max-width: 1200px) {
+        width: 550px;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 450px;
+    }
+
+    @media screen and (max-width: 540px) {
+        width: 400px;
+    }
 `;
 
 export const ItemApoio = styled.li`
@@ -94,6 +201,25 @@ export const ItemApoio = styled.li`
     text-align: justify;
     color: #000000;
     list-style-type: none;
+
+    @media screen and (max-width: 1700px) {
+       font-size: 1.4vw;
+       line-height: 45px;
+      }
+
+      @media screen and (max-width: 1300px) {
+       font-size: 1.5vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+
+      @media screen and (max-width: 540px) {
+        font-size: 14px;
+        line-height: 35px;
+       
+    }
 `;
 
 
@@ -117,6 +243,20 @@ export const MapaApoio = styled.img`
     height:50vh;
     margin: auto;
 
+    @media screen and (max-width: 1200px) {
+        
+    }
+    
+    @media screen and (max-width: 768px) {
+        width: 430px;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 540px) {
+        width: 400px;
+        margin: auto;
+    }
+
 `;
 
 export const DivFinal = styled.div`
@@ -130,6 +270,13 @@ export const Linha = styled.div`
     width: 388px;
     height: 13px;
     background: linear-gradient(90deg, #156B5D 0%, rgba(41, 209, 183, 0.6) 100%);
+
+    @media screen and (max-width: 1200px) {
+        height: 7px;
+    }
+    @media screen and (max-width: 768px) {
+        width: 200px;
+    }
 `;
 
 export const ParagrafoFinal = styled.p`
@@ -140,6 +287,27 @@ export const ParagrafoFinal = styled.p`
     text-align: justify;
     color: #000000;
     margin-left: 20px;
+
+    @media screen and (max-width: 1700px) {
+        width: 1200px;
+        font-size: 1.4vw;
+    }
+
+    @media screen and (max-width: 1300px) {
+       font-size: 1.5vw;
+       width: 1100px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        width: 700px;
+        line-height: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 450px;
+        font-size: 16px;
+    }
+
 `;
 
 

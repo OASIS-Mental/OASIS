@@ -10,6 +10,20 @@ export const ImagemDireita = styled.img`
         height: 133vh;
       
     }
+
+    @media screen and (max-width: 1300px) {
+        height: 125vh;
+    }
+
+    @media screen and (max-width: 1299px) {
+        height: 100vh;
+        width: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 80vh;
+   
+    }
 `;
 
 export const FooterTemplate = styled.footer`
