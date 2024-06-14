@@ -10,7 +10,8 @@ import { StyledOverlay, StyledMessageBox, StyledButtonOK } from '../../component
 import { FooterTem } from './components/footer-apoio';
 
 import CalendarComponent from './components/CalendarComponent';
-import MeetingCalendar from './components/MeetingCalendar';
+import CalendarWrapper from './components/CalendarWrapper';
+
 
 import LogoOASIS from "../../assets/imgAbout/logo.svg";
 import Calendario from "../../assets/imgApoio/calendario.svg";
@@ -18,7 +19,6 @@ import Group from "../../assets/imgApoio/group.svg";
 import Pin from "../../assets/imgApoio/pin.svg";
 import Whatsapp from "../../assets/imgApoio/whatsapp.svg";
 import UserAvatar from "../../components/UserAvatar";
-
 
 export default function Apoio() {
     const navigate = useNavigate();
@@ -36,6 +36,7 @@ export default function Apoio() {
     const [showMeetingCalendar, setShowMeetingCalendar] = useState(false);
     const [markedDates, setMarkedDates] = useState([new Date(2023, 4, 3), new Date(2023, 4, 10)]); // Exemplos de datas marcadas
     const [selectedDate, setSelectedDate] = useState(null);
+
 
     useEffect(() => {
         checkAuthentication();
@@ -106,8 +107,6 @@ export default function Apoio() {
         setShowErrorMessage(false);
     }
 
-
-
     function toggleCalendar() {
         setShowCalendar(!showCalendar);
     }
@@ -131,12 +130,24 @@ export default function Apoio() {
         }
     };
 
-    function combinedClickHandler(event) {
-        handleLinkClick(event);
+    function handleCalendarioClick() {
         if (isAuthenticated) {
-            toggleMeetingCalendar();
+            setShowCalendar(true);
+            setShowMeetingCalendar(false);
+        } else {
+            setShowLoginMessage(true);
         }
     }
+    
+    function handlePinClick() {
+        if (isAuthenticated) {
+            setShowMeetingCalendar(true);
+            setShowCalendar(false);
+        } else {
+            setShowLoginMessage(true);
+        }
+    }
+    
 
     return (
         <>
@@ -148,7 +159,8 @@ export default function Apoio() {
                     {!isAuthenticated ? (
                         <>
                             <NavLink onClick={() => { navigate("/logar"); setShowLoginMessage(true); }}>Login</NavLink>
-                            <NavLink onClick={() => navigate("/cadastro")}>Cadastrar</NavLink> </>
+                            <NavLink onClick={() => navigate("/cadastro")}>Cadastrar</NavLink>
+                        </>
                     ) : (
                         <UserAvatar
                             userName={name}
@@ -164,25 +176,26 @@ export default function Apoio() {
                 <IntroducaoApoio>
                     <TitleApoio>Grupo de Apoio</TitleApoio>
                 </IntroducaoApoio>
-                
+
                 <DescriptionApoio>
                     <TitleSub>Selecione sua forma de participação:</TitleSub>
                     <Paragrafo>Clique no ícone para participar de todas as opções disponíveis.</Paragrafo>
                 </DescriptionApoio>
 
-                <InfoApoio authenticated={isAuthenticated}>
+                <InfoApoio authenticated={isAuthenticated ? 'true' : undefined}>
                     <ListaApoio>
                         <ItemApoio>
                             <Imagem src={Whatsapp} onClick={handleLinkClick} /> Entrar no Grupo do WhatsApp: Conecte-se com outros membros do grupo para compartilhar experiências e oferecer apoio mútuo em tempo real.
                         </ItemApoio>
                         <ItemApoio >
-                            <Imagem src={Calendario} onClick={combinedClickHandler} /> Reuniões Online: Escolha um dia conveniente, horário sempre às 19h, inscreva-se e participe.
+                            <Imagem src={Calendario} onClick={handleCalendarioClick} /> Reuniões Online: Escolha um dia conveniente, horário sempre às 19h, inscreva-se e participe.
                         </ItemApoio>
                         <ItemApoio >
-                            <Imagem src={Pin} onClick={combinedClickHandler} /> Participação Presencial
+                            <Imagem src={Pin} onClick={handlePinClick} /> Participação Presencial
                             {isAuthenticated && (
                                 <Span>: Temos no momento em Belo Horizonte, MG, Parque Municipal. Explore no calendário as datas dos encontros de acordo com o mês, são os marcados. Os horários são todos às 15h.</Span>
-                            )}</ItemApoio>
+                            )}
+                        </ItemApoio>
                     </ListaApoio>
                     {isAuthenticated && (
                         <MapaApoio src={Group} />
@@ -190,23 +203,25 @@ export default function Apoio() {
                 </InfoApoio>
 
                 {isAuthenticated && (
-                <DivFinal>
-                    <Linha />
-                    <ParagrafoFinal>Esperamos vê-lo em nossas reuniões presenciais, onde você pode compartilhar, apoiar e encontrar solidariedade em sua jornada emocional.</ParagrafoFinal>
-                </DivFinal>
-                 )}
+                    <DivFinal>
+                        <Linha />
+                        <ParagrafoFinal>Esperamos vê-lo em nossas reuniões presenciais, onde você pode compartilhar, apoiar e encontrar solidariedade em sua jornada emocional.</ParagrafoFinal>
+                    </DivFinal>
+                )}
             </Main>
-            {showCalendar && (
+
+             {showCalendar && isAuthenticated && (
                 <Calendaroverlay>
                     <CalendarContainer>
                         <CalendarComponent onClose={toggleCalendar} />
                     </CalendarContainer>
                 </Calendaroverlay>
             )}
-            {showMeetingCalendar && (
+
+            {showMeetingCalendar && isAuthenticated && (
                 <Calendaroverlay>
                     <CalendarContainer>
-                        <MeetingCalendar
+                        <CalendarWrapper
                             markedDates={markedDates}
                             selectedDate={selectedDate}
                             onDateSelect={handleDateSelect}
@@ -216,9 +231,9 @@ export default function Apoio() {
                     </CalendarContainer>
                 </Calendaroverlay>
             )}
+
             <FooterTem />
 
-            {/* Passar `show` condicionalmente */}
             <StyledOverlay show={showLoginMessage ? 1 : 0}>
                 <StyledMessageBox>
                     <p>É necessário fazer login para navegar.</p>

@@ -40,7 +40,7 @@ const CloseButton = styled.button`
 `;
 
 const StyledCalendar = styled(Calendar)`
- &.react-calendar {
+  &.react-calendar {
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 8px;
@@ -88,9 +88,10 @@ const StyledCalendar = styled(Calendar)`
     background: #156B5D;
     color: white;
   }
+
   .react-calendar__tile {
     &:hover {
-      background: #65BBAD !important;
+        background: #65BBAD !important;
     }
   }
 
@@ -105,7 +106,7 @@ const ConfirmationMessage = styled.p`
   color: green;
 `;
 
-export default function CalendarComponent({ onClose }) {
+export default function CalendarComponent2({ onClose }) {
   const [selectedDate, setSelectedDate] = useState(null);
   const [confirmationMessage, setConfirmationMessage] = useState('');
 
@@ -121,7 +122,7 @@ export default function CalendarComponent({ onClose }) {
   const handleButtonClick = () => {
     if (selectedDate) {
       console.log("Botão 'Perfeito' clicado. Data selecionada:", selectedDate);
-      setConfirmationMessage(`Agendamento marcado para ${selectedDate.toLocaleDateString()} às 19h`);
+      setConfirmationMessage(`Agendamento marcado para ${selectedDate.toLocaleDateString()} às 15h`); // Mudança na mensagem de confirmação
     }
   };
 
