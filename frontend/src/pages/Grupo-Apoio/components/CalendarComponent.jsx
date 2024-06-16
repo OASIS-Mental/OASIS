@@ -110,7 +110,6 @@ export default function CalendarComponent({ onClose }) {
   const [confirmationMessage, setConfirmationMessage] = useState('');
 
   const handleDateChange = (date) => {
-    console.log("Data alterada:", date); // Adicionando log para verificar a data selecionada
     if (selectedDate && selectedDate.getTime() === date.getTime()) {
       setSelectedDate(null); // Desmarca a data se a mesma data for clicada novamente
     } else {

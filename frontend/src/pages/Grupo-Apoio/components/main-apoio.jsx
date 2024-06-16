@@ -256,7 +256,17 @@ export const MapaApoio = styled.img`
         width: 400px;
         margin: auto;
     }
+`;
 
+export const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const DivFinal = styled.div`

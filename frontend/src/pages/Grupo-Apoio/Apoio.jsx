@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import { Header, ImagemLogo, NavHeader, NavLink } from './components/header-apoio';
 import { Main, IntroducaoApoio, TitleApoio, DescriptionApoio, TitleSub, Paragrafo, Span } from './components/main-apoio';
-import { InfoApoio, ListaApoio, ItemApoio, Imagem, MapaApoio, DivFinal, ParagrafoFinal, Linha } from './components/main-apoio';
+import { InfoApoio, ListaApoio, ItemApoio, Imagem, MapaApoio, DivFinal, ParagrafoFinal, Linha, Container } from './components/main-apoio';
 import { Calendaroverlay, CalendarContainer } from './components/main-apoio';
 import { StyledOverlay, StyledMessageBox, StyledButtonOK } from '../../components/mensage';
 import { FooterTem } from './components/footer-apoio';
@@ -138,7 +138,7 @@ export default function Apoio() {
             setShowLoginMessage(true);
         }
     }
-    
+
     function handlePinClick() {
         if (isAuthenticated) {
             setShowMeetingCalendar(true);
@@ -147,7 +147,7 @@ export default function Apoio() {
             setShowLoginMessage(true);
         }
     }
-    
+
 
     return (
         <>
@@ -197,9 +197,15 @@ export default function Apoio() {
                             )}
                         </ItemApoio>
                     </ListaApoio>
+
                     {isAuthenticated && (
-                        <MapaApoio src={Group} />
+                        <Container>
+                            <a href="https://maps.app.goo.gl/uy62h2QiJKLozXTU7" target="_blank" rel="noopener noreferrer">
+                                <MapaApoio src={Group} />
+                            </a>
+                        </Container>
                     )}
+
                 </InfoApoio>
 
                 {isAuthenticated && (
@@ -210,7 +216,7 @@ export default function Apoio() {
                 )}
             </Main>
 
-             {showCalendar && isAuthenticated && (
+            {showCalendar && isAuthenticated && (
                 <Calendaroverlay>
                     <CalendarContainer>
                         <CalendarComponent onClose={toggleCalendar} />
