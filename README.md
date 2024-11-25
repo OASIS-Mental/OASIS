@@ -1,4 +1,4 @@
-# Server
+# Server...
 
 Este é um servidor Node.js construído com Express, Prisma para integração com o banco de dados e JWT para autenticação.
 
