@@ -14,7 +14,7 @@ const jwtSecret = 'sua_chave_secreta';
 ```
 * Inicie o servidor usando node server
 
-# Rotas Disponíveis
+# Rotas Disponíveis.
 
 * GET /users: Retorna todos os usuários cadastrados no banco de dados.
 * POST /register: Registra um novo usuário no banco de dados.
